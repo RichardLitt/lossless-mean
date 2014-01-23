@@ -1,0 +1,9 @@
+.DS_Store
+.nodemonignore
+.sass-cache/
+node_modules/
+public/lib
+test/coverage/
+config/env/development.js
+config/env/test.js
+config/env/production.js

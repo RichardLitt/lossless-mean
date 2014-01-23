@@ -1,0 +1,14 @@
+<section data-ng-controller="LabelsController" data-ng-init="findOne()">
+    <span>{{label.created | date:'medium'}}</span>/
+    <span>{{label.user.name}}</span>
+    <h2>{{label.title}}</h2>
+    <div data-ng-show="global.user._id == label.user._id">
+        <a class="btn" href="/#!/labels/{{label._id}}/edit">
+        	<i class="glyphicon glyphicon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <div>{{label.content}}</div>
+</section>

@@ -1,0 +1,11 @@
+<section data-ng-controller="LabelsController" data-ng-init="find()">
+	<ul class="articles unstyled">
+		<li data-ng-repeat="label in labels">
+			<span>{{label.created | date:'medium'}}</span> /
+			<span>{{label.user.name}}</span>
+			<h2><a data-ng-href="#!/labels/{{label._id}}">{{label.title}}</a></h2>
+			<div>{{label.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!labels || labels.length">No labels yet. <br> Why don't you <a href="/#!/labels/create">Create One</a>?</h1>
+</section>
